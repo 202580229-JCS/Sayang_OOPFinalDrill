@@ -45,6 +45,8 @@ namespace AseanPhonebook
                 string phone = ConsoleInput.ReadNonEmpty("Enter number: ");
 
                 book.Add(new Student(number, surname, first, occupation, gender, country, area, phone));
+
+                Console.WriteLine("Student successfully added to the ASEAN phonebook.");
             }
             while (ConsoleInput.ReadYesNo("Do you want to enter another entry [Y/N]? "));
         }
