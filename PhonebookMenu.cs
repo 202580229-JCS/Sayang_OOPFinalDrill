@@ -41,8 +41,8 @@ namespace AseanPhonebook
                 string occupation = ConsoleInput.ReadNonEmpty("Enter occupation: ");
                 char gender = ConsoleInput.ReadGender("Enter gender (M for male, F for female): ");
                 int country = ConsoleInput.ReadCountryCode("Enter country code: ");
-                string area = ConsoleInput.ReadNonEmpty("Enter area code: ");
-                string phone = ConsoleInput.ReadNonEmpty("Enter number: ");
+                string area = ConsoleInput.ReadDigits("Enter area code: ");
+                string phone = ConsoleInput.ReadDigits("Enter number: ");
 
                 book.Add(new Student(number, surname, first, occupation, gender, country, area, phone));
             }
@@ -90,10 +90,10 @@ namespace AseanPhonebook
                         s.CountryCode = ConsoleInput.ReadCountryCode("Enter new country code: ");
                         break;
                     case 6:
-                        s.AreaCode = ConsoleInput.ReadNonEmpty("Enter new area code: ");
+                        s.AreaCode = ConsoleInput.ReadDigits("Enter new area code: ");
                         break;
                     case 7:
-                        s.PhoneNumber = ConsoleInput.ReadNonEmpty("Enter new phone number: ");
+                        s.PhoneNumber = ConsoleInput.ReadDigits("Enter new phone number: ");
                         break;
                     case 8:
                         break;
