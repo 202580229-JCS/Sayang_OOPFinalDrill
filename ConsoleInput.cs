@@ -15,6 +15,28 @@ namespace AseanPhonebook
             }
         }
 
+        public static string ReadDigits(string prompt)
+{
+    while (true)
+    {
+        string value = ReadNonEmpty(prompt);
+        bool valid = true;
+
+        foreach (char c in value)
+        {
+            if (c < '0' || c > '9')
+            {
+                valid = false;
+                break;
+            }
+        }
+
+        if (valid)
+            return value;
+
+        Console.WriteLine("Please enter digits only.");
+    }
+}
         public static int ReadInt(string prompt)
         {
             while (true)
