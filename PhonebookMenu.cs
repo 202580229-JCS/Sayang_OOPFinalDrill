@@ -154,6 +154,7 @@ namespace AseanPhonebook
                     label += (i == selectedNames.Count - 1 ? " and " : ", ") + selectedNames[i];
             }
             Console.WriteLine("Here are the students from " + label + ":");
+Console.WriteLine("Total students found: " + results.Count);
             if (results.Count == 0) Console.WriteLine("(no students found)");
             foreach (Student s in results)
                 Console.WriteLine(s.ToSearchDisplay());
