@@ -78,8 +78,9 @@ namespace AseanPhonebook
                         s.StudentNumber = ConsoleInput.ReadUniqueStudentNumber("Enter new student number: ", book);
                         break;
                     case 2:
-                        s.Surname = ConsoleInput.ReadNonEmpty("Enter new surname: ");
-                        break;
+                         s.Surname = ConsoleInput.ReadNonEmpty("Enter new surname: ");
+    Console.WriteLine("Surname updated successfully.");
+    break;
                     case 3:
                         s.Gender = ConsoleInput.ReadGender("Enter new gender (M for male, F for female): ");
                         break;
